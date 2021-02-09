@@ -38,5 +38,6 @@ The features of interesting for this analysis are:
 - class/type/struct
 - enums
 - import/include
+- namespaces
 - scope
 - compilation modifier attribute
