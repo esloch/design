@@ -28,7 +28,7 @@ The features of interesting for this analysis are:
 - type annotation
 - variables (constant and mutable)
 - tuples, lists, arrays, set and dictionaries
-- pointers
+- pointers and references
 - ownership
 - conditional control (if, else if, else, switch, case, etc)
 - loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)
