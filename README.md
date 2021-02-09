@@ -25,17 +25,18 @@ This repository will contain information about the following programming languag
 
 The features of interesting for this analysis are:
 
-- type annotation/declaration
+- type annotation
 - variables (constant and mutable)
+- tuples, lists, arrays, set and dictionaries
 - pointers
 - ownership
-- if control
+- conditional control (if, else if, else, switch, case, etc)
 - loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)
 - function and lambda expression
-- function templates
+- templates
 - macros
 - class/type/struct
 - enums
 - import/include
 - scope
-- Attribute specifier sequence (c++)
+- compilation modifier attribute
