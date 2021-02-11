@@ -1,4 +1,4 @@
-# [Feature Name]
+# Code style convention
 
 
 <!-- DESCRIPTION -->
