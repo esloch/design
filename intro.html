@@ -5,57 +5,56 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programming language references &#8212; Fenix Language</title>
+    <title>Fenix Language Design &#8212; Fenix Language</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
   <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
   <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Classes, Types and Structs" href="classes_types_structs.html" />
-    <link rel="prev" title="Fenix Language Design" href="../README.html" />
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programming language references" href="references/intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -72,125 +71,125 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+<a class="navbar-brand text-wrap" href="index.html">
   
   
   <h1 class="site-logo" id="site-title">Fenix Language</h1>
   
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="references/intro.html">
    Programming language references
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="classes_types_structs.html">
+    <a class="reference internal" href="references/classes_types_structs.html">
      Classes, Types and Structs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="code-style-conventions.html">
+    <a class="reference internal" href="references/code-style-conventions.html">
      Code Style Convention
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="import.html">
+    <a class="reference internal" href="references/import.html">
      Import Resource
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="macros.html">
+    <a class="reference internal" href="references/macros.html">
      Macros
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ownership.html">
+    <a class="reference internal" href="references/ownership.html">
      Ownership
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="scope.html">
+    <a class="reference internal" href="references/scope.html">
      Scope
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="tuples_lists_arrays_set_dictionaries.html">
+    <a class="reference internal" href="references/tuples_lists_arrays_set_dictionaries.html">
      Tuples, lists, arrays, set and dictionaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="compilation_modifier_attributes.html">
+    <a class="reference internal" href="references/compilation_modifier_attributes.html">
      Compilation Modifier Attributes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="enums.html">
+    <a class="reference internal" href="references/enums.html">
      Enums
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="namespaces.html">
+    <a class="reference internal" href="references/namespaces.html">
      Namespaces
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="pointers_and_references.html">
+    <a class="reference internal" href="references/pointers_and_references.html">
      Pointers and References
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="type_annotation.html">
+    <a class="reference internal" href="references/type_annotation.html">
      Type annotation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="conditional-control.html">
+    <a class="reference internal" href="references/conditional-control.html">
      Conditional Control
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="functions.html">
+    <a class="reference internal" href="references/functions.html">
      Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="lambda.html">
+    <a class="reference internal" href="references/lambda.html">
      Lambda Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="loop-control.html">
+    <a class="reference internal" href="references/loop-control.html">
      Loop Control
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="operators.html">
+    <a class="reference internal" href="references/operators.html">
      Operators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="scalar-types.html">
+    <a class="reference internal" href="references/scalar-types.html">
      Scalar types
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="templates.html">
+    <a class="reference internal" href="references/templates.html">
      Templates
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="variables.html">
+    <a class="reference internal" href="references/variables.html">
      Variables
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="code-injection.html">
+    <a class="reference internal" href="references/code-injection.html">
      Code Injection
     </a>
    </li>
@@ -238,7 +237,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/references/__intro__.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -258,10 +257,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/__intro__.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/__intro__.md"><button
+        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/intro.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -290,13 +289,6 @@
   <a class="reference internal nav-link" href="#languages-used-as-reference">
    Languages used as reference
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#features-of-interesting">
-     Features of Interesting
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -309,14 +301,14 @@
         
               <div>
                 
-  <div class="section" id="programming-language-references">
-<h1>Programming language references<a class="headerlink" href="#programming-language-references" title="Permalink to this headline">¶</a></h1>
-<p>The aim for this section is to compile a high level information about how other
-languages define their structures such as variables definition, import external
-libraries, if and loop controle structure, etc.</p>
+  <div class="section" id="fenix-language-design">
+<h1>Fenix Language Design<a class="headerlink" href="#fenix-language-design" title="Permalink to this headline">¶</a></h1>
+<p>The aim for this repository is to compile a high level information about how other
+languages define their structures such as variables definition, import external libraries,
+if and loop controle structure, etc and propose a how the FenixLang should look like.</p>
 <div class="section" id="languages-used-as-reference">
 <h2>Languages used as reference<a class="headerlink" href="#languages-used-as-reference" title="Permalink to this headline">¶</a></h2>
-<p>The programming language used for references are:</p>
+<p>This repository will contain information about the following programming language:</p>
 <ul class="simple">
 <li><p>C++</p></li>
 <li><p>C#</p></li>
@@ -330,33 +322,7 @@ libraries, if and loop controle structure, etc.</p>
 <li><p>Rust</p></li>
 <li><p>TypeScript</p></li>
 </ul>
-<div class="section" id="features-of-interesting">
-<h3>Features of Interesting<a class="headerlink" href="#features-of-interesting" title="Permalink to this headline">¶</a></h3>
-<p>The features of interesting for this analysis are:</p>
-<ul class="simple">
-<li><p>code style conventions</p></li>
-<li><p>type annotations</p></li>
-<li><p>variables (constant and mutable)</p></li>
-<li><p>scalar types</p></li>
-<li><p>tuples, lists, arrays, set and dictionaries types</p></li>
-<li><p>pointers and references</p></li>
-<li><p>ownership</p></li>
-<li><p>conditional control (if, else if, else, switch, case, etc)</p></li>
-<li><p>loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)</p></li>
-<li><p>functions</p></li>
-<li><p>lambda functions</p></li>
-<li><p>templates</p></li>
-<li><p>macros</p></li>
-<li><p>classes/types/structs</p></li>
-<li><p>enums</p></li>
-<li><p>import/include</p></li>
-<li><p>namespaces</p></li>
-<li><p>scope</p></li>
-<li><p>compilation modifier attributes</p></li>
-<li><p>code injection</p></li>
-</ul>
 <div class="toctree-wrapper compound">
-</div>
 </div>
 </div>
 </div>
@@ -374,7 +340,7 @@ libraries, if and loop controle structure, etc.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./references"
+            path: "./."
         },
         predefinedOutput: true
     }
@@ -389,8 +355,7 @@ libraries, if and loop controle structure, etc.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">Fenix Language Design</a>
-    <a class='right-next' id="next-link" href="classes_types_structs.html" title="next page">Classes, Types and Structs</a>
+    <a class='right-next' id="next-link" href="references/intro.html" title="next page">Programming language references</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -410,7 +375,7 @@ libraries, if and loop controle structure, etc.</p>
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

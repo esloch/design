@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pointers and References &#8212; Fenix Language</title>
+    <title>Programming language references &#8212; Fenix Language</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Type annotation" href="type_annotation.html" />
-    <link rel="prev" title="Namespaces" href="namespaces.html" />
+    <link rel="next" title="Classes, Types and Structs" href="classes_types_structs.html" />
+    <link rel="prev" title="Fenix Language Design" href="../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -85,10 +85,10 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
+  <a class="current reference internal" href="#">
    Programming language references
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="classes_types_structs.html">
      Classes, Types and Structs
@@ -139,8 +139,8 @@
      Namespaces
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="pointers_and_references.html">
      Pointers and References
     </a>
    </li>
@@ -238,7 +238,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/references/pointers_and_references.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/references/intro.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -258,10 +258,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/pointers_and_references.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/intro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/pointers_and_references.md"><button
+        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/intro.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -287,59 +287,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c">
-   C++
+  <a class="reference internal nav-link" href="#languages-used-as-reference">
+   Languages used as reference
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-sharp">
-   C-Sharp
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#go">
-   GO
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#java">
-   Java
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#javascript">
-   JavaScript
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#julia">
-   Julia
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#php">
-   PHP
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python">
-   Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#r">
-   R
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rust">
-   Rust
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#typescript">
-   TypeScript
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#features-of-interesting">
+     Features of Interesting
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -352,41 +309,55 @@
         
               <div>
                 
-  <div class="section" id="pointers-and-references">
-<h1>Pointers and References<a class="headerlink" href="#pointers-and-references" title="Permalink to this headline">¶</a></h1>
-<!-- DESCRIPTION -->
-<div class="section" id="c">
-<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="programming-language-references">
+<h1>Programming language references<a class="headerlink" href="#programming-language-references" title="Permalink to this headline">¶</a></h1>
+<p>The aim for this section is to compile a high level information about how other
+languages define their structures such as variables definition, import external
+libraries, if and loop controle structure, etc.</p>
+<div class="section" id="languages-used-as-reference">
+<h2>Languages used as reference<a class="headerlink" href="#languages-used-as-reference" title="Permalink to this headline">¶</a></h2>
+<p>The programming language used for references are:</p>
+<ul class="simple">
+<li><p>C++</p></li>
+<li><p>C#</p></li>
+<li><p>GO</p></li>
+<li><p>Java</p></li>
+<li><p>JavaScript</p></li>
+<li><p>Julia</p></li>
+<li><p>PHP</p></li>
+<li><p>Python</p></li>
+<li><p>R</p></li>
+<li><p>Rust</p></li>
+<li><p>TypeScript</p></li>
+</ul>
+<div class="section" id="features-of-interesting">
+<h3>Features of Interesting<a class="headerlink" href="#features-of-interesting" title="Permalink to this headline">¶</a></h3>
+<p>The features of interesting for this analysis are:</p>
+<ul class="simple">
+<li><p>code style conventions</p></li>
+<li><p>type annotations</p></li>
+<li><p>variables (constant and mutable)</p></li>
+<li><p>scalar types</p></li>
+<li><p>tuples, lists, arrays, set and dictionaries types</p></li>
+<li><p>pointers and references</p></li>
+<li><p>ownership</p></li>
+<li><p>conditional control (if, else if, else, switch, case, etc)</p></li>
+<li><p>loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)</p></li>
+<li><p>functions</p></li>
+<li><p>lambda functions</p></li>
+<li><p>templates</p></li>
+<li><p>macros</p></li>
+<li><p>classes/types/structs</p></li>
+<li><p>enums</p></li>
+<li><p>import/include</p></li>
+<li><p>namespaces</p></li>
+<li><p>scope</p></li>
+<li><p>compilation modifier attributes</p></li>
+<li><p>code injection</p></li>
+</ul>
+<div class="toctree-wrapper compound">
 </div>
-<div class="section" id="c-sharp">
-<h2>C-Sharp<a class="headerlink" href="#c-sharp" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="go">
-<h2>GO<a class="headerlink" href="#go" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="java">
-<h2>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="javascript">
-<h2>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="julia">
-<h2>Julia<a class="headerlink" href="#julia" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="php">
-<h2>PHP<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="r">
-<h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="rust">
-<h2>Rust<a class="headerlink" href="#rust" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="typescript">
-<h2>TypeScript<a class="headerlink" href="#typescript" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -418,8 +389,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="namespaces.html" title="previous page">Namespaces</a>
-    <a class='right-next' id="next-link" href="type_annotation.html" title="next page">Type annotation</a>
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Fenix Language Design</a>
+    <a class='right-next' id="next-link" href="classes_types_structs.html" title="next page">Classes, Types and Structs</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
