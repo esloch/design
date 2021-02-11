@@ -1,5 +1,5 @@
-- file: README
-- file: references/__intro__
+- file: intro
+- file: references/intro
   sections:
   - file: references/classes_types_structs
   - file: references/code-style-conventions
