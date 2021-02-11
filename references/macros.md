@@ -1,4 +1,4 @@
-# [Feature Name]
+# Macros
 
 
 <!-- DESCRIPTION -->
@@ -45,5 +45,3 @@
 
 
 ## TypeScript
-
-

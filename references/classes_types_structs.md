@@ -1,4 +1,4 @@
-# [Feature Name]
+# Classes, Types and Structs
 
 
 <!-- DESCRIPTION -->
@@ -45,5 +45,3 @@
 
 
 ## TypeScript
-
-

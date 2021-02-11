@@ -3,6 +3,14 @@
 
 This chapter will present how different languages implements variables (in high level), their rules and conventions.
 
+Points of interesting:
+
+- variable name
+- type annotation/declaration
+- constant and mutable variables
+
+Finally, a example is presented to illustrate how the variable should be created for each programming language.
+
 
 ## C++
 
@@ -44,14 +52,16 @@ Naming and layout rules:
 - NL.25: Don’t use void as an argument type
 - NL.26: Use conventional const notation
 
-### Declaring and Defining a variable
+### Type Annotation/Declaration
 
+
+### Constant and Mutable Variables
 
 
 ### Examples
 
 
-### References:
+### References
 
 [cplusplus-variables]: http://www.cplusplus.com/doc/tutorial/variables/
 - http://www.cplusplus.com/doc/tutorial/variables/
@@ -62,108 +72,208 @@ Naming and layout rules:
 
 ## C-Sharp
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 ## GO
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 
 ## Java
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 
 ## JavaScript
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
+
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
 
 ...
 
 
 ## Julia
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 
 ## PHP
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 
 ## Python
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 
 ## R
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 ### Examples
 
 ...
 
-### References:
+### References
 
 ...
 
 ## Rust
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
 ...
 
 
@@ -171,12 +281,21 @@ Naming and layout rules:
 
 ...
 
-### References:
+### References
 
 ...
 
 ## TypeScript
 
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
 
 ...
 
@@ -184,6 +303,6 @@ Naming and layout rules:
 
 ...
 
-### References:
+### References
 
 ...

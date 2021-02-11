@@ -1,0 +1,24 @@
+- file: README
+- file: references/__intro__
+  sections:
+  - file: references/classes_types_structs
+  - file: references/code-style-conventions
+  - file: references/import
+  - file: references/macros
+  - file: references/ownership
+  - file: references/scope
+  - file: references/tuples_lists_arrays_set_dictionaries
+  - file: references/compilation_modifier_attributes
+  - file: references/enums
+  - file: references/namespaces
+  - file: references/pointers_and_references
+  - file: references/type_annotation
+  - file: references/conditional-control
+  - file: references/functions
+  - file: references/lambda
+  - file: references/loop-control
+  - file: references/operators
+  - file: references/scalar-types
+  - file: references/templates
+  - file: references/variables
+  - file: references/code-injection

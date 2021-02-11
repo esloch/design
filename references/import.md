@@ -1,4 +1,4 @@
-# [Feature Name]
+# Import Resource
 
 
 <!-- DESCRIPTION -->
@@ -45,5 +45,3 @@
 
 
 ## TypeScript
-
-

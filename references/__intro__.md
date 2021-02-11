@@ -1,13 +1,13 @@
-# Fenix Language Design
+# Programming language references
 
-The aim for this repository is to compile a high level information about how other
-languages define their structures such as variables definition, import external libraries,
-if and loop controle structure, etc and propose a how the FenixLang should look like.
+The aim for this section is to compile a high level information about how other
+languages define their structures such as variables definition, import external
+libraries, if and loop controle structure, etc.
 
 
 ## Languages used as reference
 
-This repository will contain information about the following programming language:
+The programming language used for references are:
 
 - C++
 - C#

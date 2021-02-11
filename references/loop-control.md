@@ -1,4 +1,4 @@
-# [Feature Name]
+# Loop Control
 
 
 <!-- DESCRIPTION -->
@@ -45,5 +45,3 @@
 
 
 ## TypeScript
-
-
