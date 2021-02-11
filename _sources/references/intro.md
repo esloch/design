@@ -45,3 +45,4 @@ The features of interesting for this analysis are:
 - scope
 - compilation modifier attributes
 - code injection
+- concurrency
