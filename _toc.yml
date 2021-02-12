@@ -22,3 +22,6 @@
   - file: references/templates
   - file: references/variables
   - file: references/code-injection
+  - file: references/concurrency
+  - file: references/context-manager
+  - file: references/integration-with-other-languages

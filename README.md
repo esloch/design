@@ -11,7 +11,8 @@ This repository will contain information about the following programming languag
 
 - C++
 - C#
-- GO
+- Go
+- Godot
 - Java
 - JavaScript
 - Julia

@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := help
+.DEFAULT_GoAL := help
 
 MAKEFILE_DIR = $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
