@@ -50,3 +50,4 @@ The features of interesting for this analysis are:
 - context manager
 - integration with other languages
 - package management
+- docstrings
