@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enums &#8212; Fenix Language</title>
+    <title>Integration with other languages &#8212; Fenix Language</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Namespaces" href="namespaces.html" />
-    <link rel="prev" title="Compilation Modifier Attributes" href="compilation_modifier_attributes.html" />
+    <link rel="prev" title="Context Manager" href="context-manager.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -129,8 +128,8 @@
      Compilation Modifier Attributes
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="enums.html">
      Enums
     </a>
    </li>
@@ -204,8 +203,8 @@
      Context Manager
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="integration-with-other-languages.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Integration with other languages
     </a>
    </li>
@@ -253,7 +252,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/references/enums.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/references/integration-with-other-languages.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -273,10 +272,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/enums.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/integration-with-other-languages.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/enums.md"><button
+        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/integration-with-other-languages.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -305,16 +304,6 @@
   <a class="reference internal nav-link" href="#c">
    C++
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-sharp">
-   C-Sharp
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#go">
-   Go
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
@@ -329,8 +318,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#godot">
-   Godot
+  <a class="reference internal nav-link" href="#c-sharp">
+   C-Sharp
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -346,44 +335,174 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#go">
+   Go
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#godot">
+   Godot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#java">
    Java
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#javascript">
    JavaScript
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#julia">
    Julia
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#php">
    PHP
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python">
    Python
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#r">
    R
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rust">
    Rust
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#typescript">
    TypeScript
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     References
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -396,17 +515,11 @@
         
               <div>
                 
-  <div class="section" id="enums">
-<h1>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="integration-with-other-languages">
+<h1>Integration with other languages<a class="headerlink" href="#integration-with-other-languages" title="Permalink to this headline">¶</a></h1>
 <!-- DESCRIPTION -->
 <div class="section" id="c">
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="c-sharp">
-<h2>C-Sharp<a class="headerlink" href="#c-sharp" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="go">
-<h2>Go<a class="headerlink" href="#go" title="Permalink to this headline">¶</a></h2>
 <p>…</p>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
@@ -417,8 +530,8 @@
 <p>…</p>
 </div>
 </div>
-<div class="section" id="godot">
-<h2>Godot<a class="headerlink" href="#godot" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="c-sharp">
+<h2>C-Sharp<a class="headerlink" href="#c-sharp" title="Permalink to this headline">¶</a></h2>
 <p>…</p>
 <div class="section" id="id1">
 <h3>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -429,29 +542,125 @@
 <p>…</p>
 </div>
 </div>
+<div class="section" id="go">
+<h2>Go<a class="headerlink" href="#go" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id3">
+<h3>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id4">
+<h3>References<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+</div>
+<div class="section" id="godot">
+<h2>Godot<a class="headerlink" href="#godot" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id5">
+<h3>Examples<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id6">
+<h3>References<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+</div>
 <div class="section" id="java">
 <h2>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id7">
+<h3>Examples<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id8">
+<h3>References<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="javascript">
 <h2>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id9">
+<h3>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id10">
+<h3>References<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="julia">
 <h2>Julia<a class="headerlink" href="#julia" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id11">
+<h3>Examples<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id12">
+<h3>References<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="php">
 <h2>PHP<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id13">
+<h3>Examples<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id14">
+<h3>References<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id15">
+<h3>Examples<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id16">
+<h3>References<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="r">
 <h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id17">
+<h3>Examples<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id18">
+<h3>References<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="rust">
 <h2>Rust<a class="headerlink" href="#rust" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id19">
+<h3>Examples<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id20">
+<h3>References<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="typescript">
 <h2>TypeScript<a class="headerlink" href="#typescript" title="Permalink to this headline">¶</a></h2>
+<p>…</p>
+<div class="section" id="id21">
+<h3>Examples<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="id22">
+<h3>References<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>…</p>
+</div>
 </div>
 </div>
 
@@ -483,8 +692,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="compilation_modifier_attributes.html" title="previous page">Compilation Modifier Attributes</a>
-    <a class='right-next' id="next-link" href="namespaces.html" title="next page">Namespaces</a>
+    <a class='left-prev' id="prev-link" href="context-manager.html" title="previous page">Context Manager</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

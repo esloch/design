@@ -11,7 +11,8 @@ The programming language used for references are:
 
 - C++
 - C#
-- GO
+- Go
+- Godot
 - Java
 - JavaScript
 - Julia
@@ -46,3 +47,7 @@ The features of interesting for this analysis are:
 - compilation modifier attributes
 - code injection
 - concurrency
+- context manager
+- integration with other languages
+- package management
+- docstrings

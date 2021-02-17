@@ -92,7 +92,7 @@ Naming and layout rules:
 
 ...
 
-## GO
+## Go
 
 ### Variable Name
 

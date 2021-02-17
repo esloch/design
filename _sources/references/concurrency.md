@@ -1,7 +1,12 @@
 # Concurrency
 
 
-<!-- DESCRIPTION -->
+Points of interesting:
+
+- Processes
+- Threads
+- Asynchronous
+- Synchronous
 
 
 ## C++
@@ -12,7 +17,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -25,12 +30,12 @@
 
 ...
 
-### References:
+### References
 
 ...
 
 
-## GO
+## Go
 
 ...
 
@@ -38,7 +43,20 @@
 
 ...
 
-### References:
+### References
+
+...
+
+
+## Godot
+
+...
+
+### Examples
+
+...
+
+### References
 
 ...
 
@@ -51,7 +69,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -64,7 +82,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -77,7 +95,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -90,7 +108,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -103,7 +121,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -116,7 +134,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -129,7 +147,7 @@
 
 ...
 
-### References:
+### References
 
 ...
 
@@ -142,6 +160,6 @@
 
 ...
 
-### References:
+### References
 
 ...
