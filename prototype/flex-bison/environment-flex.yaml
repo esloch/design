@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - flex
+  - c-compiler
+  - compiler-rt
+  - clang
+  - clangdev
+  - cxx-compiler
+  - make

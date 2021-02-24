@@ -26,28 +26,31 @@ The programming language used for references are:
 
 The features of interesting for this analysis are:
 
-- code style conventions
-- type annotations
-- variables (constant and mutable)
-- scalar types
-- tuples, lists, arrays, set and dictionaries types
-- pointers and references
-- ownership
-- conditional control (if, else if, else, switch, case, etc)
-- loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)
-- functions
-- lambda functions
-- templates
-- macros
 - classes/types/structs
-- enums
-- import/include
-- namespaces
-- scope
-- compilation modifier attributes
 - code injection
+- code style conventions
+- compilation modifier attributes
 - concurrency
+- conditional control (if, else if, else, switch, case, etc)
 - context manager
-- integration with other languages
-- package management
 - docstrings
+- enums
+- error handling
+- functions
+- import/include
+- integration with other languages
+- lambda functions
+- loop control (while, do while, for, for each, list comprehension, dictionary comprehension, etc)
+- macros
+- match pattern
+- namespaces
+- operators
+- package management
+- pointers and references
+- primitive types
+- scalar types
+- scope
+- templates
+- tuples, lists, arrays, set and dictionaries types
+- type annotations
+- variables and constants

@@ -7,10 +7,14 @@ Points of interesting:
 
 - variable name
 - type annotation/declaration
-- constant and mutable variables
+- constant/immutable and mutable variables
+- ownership
 
 Finally, a example is presented to illustrate how the variable should be created for each programming language.
 
+**Extra references:**
+
+- https://en.wikipedia.org/wiki/Immutable_object
 
 ## C++
 
@@ -54,12 +58,19 @@ Naming and layout rules:
 
 ### Type Annotation/Declaration
 
+...
 
 ### Constant and Mutable Variables
 
+...
+
+### Ownership
+
+...
 
 ### Examples
 
+...
 
 ### References
 
@@ -84,6 +95,10 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
+
 ### Examples
 
 ...
@@ -103,6 +118,36 @@ Naming and layout rules:
 ...
 
 ### Constant and Mutable Variables
+
+...
+
+### Ownership
+
+...
+
+### Examples
+
+...
+
+### References
+
+...
+
+## Godot
+
+### Variable Name
+
+...
+
+### Type Annotation/Declaration
+
+...
+
+### Constant and Mutable Variables
+
+...
+
+### Ownership
 
 ...
 
@@ -129,6 +174,10 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
+
 ### Examples
 
 ...
@@ -152,21 +201,15 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
+
 ### Examples
 
 ...
 
 ### References
-
-### Variable Name
-
-...
-
-### Type Annotation/Declaration
-
-...
-
-### Constant and Mutable Variables
 
 ...
 
@@ -182,6 +225,10 @@ Naming and layout rules:
 ...
 
 ### Constant and Mutable Variables
+
+...
+
+### Ownership
 
 ...
 
@@ -208,6 +255,10 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
+
 ### Examples
 
 ...
@@ -228,6 +279,10 @@ Naming and layout rules:
 ...
 
 ### Constant and Mutable Variables
+
+...
+
+### Ownership
 
 ...
 
@@ -254,6 +309,10 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
+
 ### Examples
 
 ...
@@ -276,6 +335,9 @@ Naming and layout rules:
 
 ...
 
+### Ownership
+
+...
 
 ### Examples
 
@@ -296,6 +358,10 @@ Naming and layout rules:
 ...
 
 ### Constant and Mutable Variables
+
+...
+
+### Ownership
 
 ...
 

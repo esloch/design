@@ -130,3 +130,7 @@ dmypy.json
 
 # jupyter-book
 _build/
+
+
+# c++
+a.out
