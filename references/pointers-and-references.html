@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tuples, lists, arrays, set and dictionaries &#8212; Fenix Language</title>
+    <title>Pointers and References &#8212; Fenix Language</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Compilation Modifier Attributes" href="compilation_modifier_attributes.html" />
-    <link rel="prev" title="Scope" href="scope.html" />
+    <link rel="next" title="Primitive types" href="primitive-types.html" />
+    <link rel="prev" title="Package Management" href="package-management.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,8 +90,13 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="classes_types_structs.html">
+    <a class="reference internal" href="classes-types-structs.html">
      Classes, Types and Structs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="code-injection.html">
+     Code Injection
     </a>
    </li>
    <li class="toctree-l2">
@@ -100,53 +105,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="import.html">
-     Import Resource
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="macros.html">
-     Macros
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ownership.html">
-     Ownership
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="scope.html">
-     Scope
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Tuples, lists, arrays, set and dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="compilation_modifier_attributes.html">
+    <a class="reference internal" href="compilation-modifier-attributes.html">
      Compilation Modifier Attributes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="enums.html">
-     Enums
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="namespaces.html">
-     Namespaces
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pointers_and_references.html">
-     Pointers and References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="type_annotation.html">
-     Type annotation
+    <a class="reference internal" href="concurrency.html">
+     Concurrency
     </a>
    </li>
    <li class="toctree-l2">
@@ -155,8 +120,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="context-manager.html">
+     Context Manager
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docstrings.html">
+     [Feature Name]
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enums.html">
+     Enums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error-handling.html">
+     Error Handling
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="functions.html">
      Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="import.html">
+     Import Resource
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="integration-with-other-languages.html">
+     Integration with other languages
     </a>
    </li>
    <li class="toctree-l2">
@@ -170,8 +165,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="macros.html">
+     Macros
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="match-pattern.html">
+     Match Pattern
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespaces.html">
+     Namespaces
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="operators.html">
      Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="package-management.html">
+     Package Management
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Pointers and References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="primitive-types.html">
+     Primitive types
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,33 +205,28 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="templates.html">
      Templates
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="variables.html">
+    <a class="reference internal" href="tuples-lists-arrays-set-dictionaries.html">
+     Tuples, lists, arrays, set and dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="type-annotation.html">
+     Type annotation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables-and-constants.html">
      Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="code-injection.html">
-     Code Injection
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="concurrency.html">
-     Concurrency
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="context-manager.html">
-     Context Manager
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="integration-with-other-languages.html">
-     Integration with other languages
     </a>
    </li>
   </ul>
@@ -253,7 +273,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/references/tuples_lists_arrays_set_dictionaries.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/references/pointers-and-references.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -273,10 +293,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/tuples_lists_arrays_set_dictionaries.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fenix-project/design/issues/new?title=Issue%20on%20page%20%2Freferences/pointers-and-references.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/tuples_lists_arrays_set_dictionaries.md"><button
+        <a class="edit-button" href="https://github.com/fenix-project/design/edit/main/references/pointers-and-references.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -516,8 +536,8 @@
         
               <div>
                 
-  <div class="section" id="tuples-lists-arrays-set-and-dictionaries">
-<h1>Tuples, lists, arrays, set and dictionaries<a class="headerlink" href="#tuples-lists-arrays-set-and-dictionaries" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pointers-and-references">
+<h1>Pointers and References<a class="headerlink" href="#pointers-and-references" title="Permalink to this headline">¶</a></h1>
 <!-- DESCRIPTION -->
 <div class="section" id="c">
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
@@ -693,8 +713,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="scope.html" title="previous page">Scope</a>
-    <a class='right-next' id="next-link" href="compilation_modifier_attributes.html" title="next page">Compilation Modifier Attributes</a>
+    <a class='left-prev' id="prev-link" href="package-management.html" title="previous page">Package Management</a>
+    <a class='right-next' id="next-link" href="primitive-types.html" title="next page">Primitive types</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
