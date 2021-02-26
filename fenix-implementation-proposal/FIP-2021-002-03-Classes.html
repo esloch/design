@@ -400,8 +400,10 @@ resolution: url to discussion (required for Accepted | Rejected | Withdrawn)
 </ul>
 </li>
 <li><p>Inheritance</p></li>
+<li><p>Template class</p></li>
+<li><p>Interface</p></li>
+<li><p>Instantiation</p></li>
 <li><p>Docstrings</p></li>
-<li><p>Class Instance</p></li>
 </ul>
 <p><strong>Conventions</strong></p>
 <p>In this proposal, some examples use placeholders by adding a name inside <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>
@@ -529,25 +531,37 @@ notes:
 - This example ilustrate how to create a class for Fenix Language.
 &quot;&quot;&quot;
 
-class Base[+]:
+interface IBase:
+  &quot;&quot;&quot;
+  title: Define the interface for Base classes.
+  &quot;&quot;&quot;
+  attributes:
+    _attr1: [-] Nullable[int]
+    _attr2: [#] mutable float
+    attr3: [+] constant string = &quot;default&quot;
+
+  methods:
+    add(number1: int32, number2: int32)[+] -&gt; int32
+    sub(number1: int32, number2: int32)[+] -&gt; int32
+
+
+class Base(IBase)[+]:
   &quot;&quot;&quot;
   title: The Base class aims to organize a simple and util set of attributes
     and methods to be reused for derived classes.
-
-  attributes:
-    - _attr1: Attribute used as a first attribute
-    - _attr2: Attribute used as a second attribute
-    - attr3: Attribute used as a third attribute
   &quot;&quot;&quot;
 
   attributes:
-    [-] _attr1: Nullable[int]
-    [#] _attr2: mutable float
-    [+] attr3: constant string = &quot;default&quot;
+    ### Attribute used as a first information
+    _attr1: [-] mutable [int|float]?
+    ### Attribute used as a second information
+    _attr2: [#] mutable float
+    ### Attribute used as a third information
+    attr3: [+] constant string = &quot;default&quot;
 
   methods:
     __init__(
-      attr1: Nullable[int],
+      attr1: [int|float]?,
       attr2: mutable float,
       attr3: constant string = &quot;default2&quot;
     )[+]:
@@ -561,18 +575,22 @@ class Base[+]:
 
       notes:
         - if at the end of `__init__, self.attr1 is not defined, it
-          will assume `Null`
+          will assume `null`
         - if at the end of `__init__, self.attr2 is not defined, an
           error is raised.
         - if at the end of `__init__, self.attr3 is not defined, it
           will assume `&quot;default&quot;` string.
 
       &quot;&quot;&quot;
-      self.arg1 = self.arg1
-      self.arg2 = self.arg2
-      self.arg3 = self.arg3
+      self.attr1 = attr1
+      self.attr2 = attr2
+      self.attr3 = attr3
 
-    add(number1: int, number2: int)[+] -&gt; int:
+    add(
+      (number1: constant int32, number2: constant int32) -&gt; int32,
+      (number1: constant int64, number2: constant int64) -&gt; int64,
+      (number1: constant float32, number2: constant float32) -&gt; float32
+    )[+]:
       &quot;&quot;&quot;
       title: Add two integer and return the result.
 
@@ -584,14 +602,23 @@ class Base[+]:
       &quot;&quot;&quot;
       return number1 + number2
 
+    add(*args: Tuple&lt;string&gt;)[+] -&gt; string:
+      return &#39;&#39;.join(args, sep=&#39;, &#39;)
 
-class Derived[+](Base):
+    add(value1: constant &lt;T&gt;, value2: constant &lt;U&gt;)[+]:
+      raise Exception(
+        &quot;The operation between {type(value1)} and {type(value2)} &quot; +
+        &quot; is not supported&quot;.
+      )
+
+
+class DerivedOne(Base)[+]:
   attributes:
-    [+] attr4: datetime
+    attr4: [+] mutable datetime
 
   methods:
     __init__(
-      attr1: Nullable[int],
+      attr1: mutable nullable int,
       attr2: mutable float,
       attr3: constant string = &quot;default2&quot;,
       attr4: datetime = datetime.now()
@@ -605,10 +632,11 @@ class Derived[+](Base):
         - attr3: The third parameter.
         - attr4: The forth attribute
       &quot;&quot;&quot;
-      self.__base__[Base].__init__`(attr1, attr2, attr3)
+      ## or, in this case, just `self.__base__.__init__` ...
+      self.__base__[Base].__init__(attr1, attr2, attr3)
       self.attr4 = attr4
 
-    sub(number1: int, number2: int)[+] -&gt; int:
+    sub(number1: int32, number2: int32)[+] -&gt; int32:
       &quot;&quot;&quot;
       title: Subtract two integer and return the result.
 
@@ -624,7 +652,19 @@ class Derived[+](Base):
       self.attr4 = datetime.now()
 
 
-derived_obj = Derived(attr1=null, attr2=2.5)
+class MyGenericClass&lt;const T, mutable U&gt;:
+  attributes:
+    attr1: [+] &lt;T&gt;
+    attr2: [+] &lt;U&gt;
+
+  methods:
+    __init__(attr1: &lt;T&gt;, attr2: &lt;U&gt;)[+]:
+      self.attr1 = attr1
+      self.attr2 = attr2
+
+
+derived_obj = DerivedOne(attr1=null, attr2=2.5)
+generic_obj = MyGenericClass&lt;int32, float32&gt;(2, 2.2)
 
 </pre></div>
 </div>
@@ -639,6 +679,15 @@ derived_obj = Derived(attr1=null, attr2=2.5)
 <li><p>Magic Methods in Python: <a class="reference external" href="https://www.tutorialsteacher.com/python/magic-methods-in-python">https://www.tutorialsteacher.com/python/magic-methods-in-python</a></p></li>
 <li><p>A Guide to Python’s Magic Methods: <a class="reference external" href="https://rszalski.github.io/magicmethods/">https://rszalski.github.io/magicmethods/</a></p></li>
 <li><p>Class diagram: <a class="reference external" href="https://en.wikipedia.org/wiki/Class_diagram">https://en.wikipedia.org/wiki/Class_diagram</a></p></li>
+<li><p>Multiple dispatch: <a class="reference external" href="https://en.wikipedia.org/wiki/Multiple_dispatch">https://en.wikipedia.org/wiki/Multiple_dispatch</a></p></li>
+<li><p>Template (C++): <a class="reference external" href="https://en.wikipedia.org/wiki/Template_(C%2B%2B)">https://en.wikipedia.org/wiki/Template_(C++)</a></p></li>
+<li><p>Generics in Java: <a class="reference external" href="https://en.wikipedia.org/wiki/Generics_in_Java">https://en.wikipedia.org/wiki/Generics_in_Java</a></p></li>
+<li><p>Template metaprogramming: <a class="reference external" href="https://en.wikipedia.org/wiki/Template_metaprogramming">https://en.wikipedia.org/wiki/Template_metaprogramming</a></p></li>
+<li><p>Generic programming: <a class="reference external" href="https://en.wikipedia.org/wiki/Generic_programming">https://en.wikipedia.org/wiki/Generic_programming</a></p></li>
+<li><p>Metaprogramming: <a class="reference external" href="https://en.wikipedia.org/wiki/Metaprogramming">https://en.wikipedia.org/wiki/Metaprogramming</a></p></li>
+<li><p>Polymorphism (computer science): <a class="reference external" href="https://en.wikipedia.org/wiki/Polymorphism_(computer_science)">https://en.wikipedia.org/wiki/Polymorphism_(computer_science)</a></p></li>
+<li><p>Nullable type: <a class="reference external" href="https://en.wikipedia.org/wiki/Nullable_type">https://en.wikipedia.org/wiki/Nullable_type</a></p></li>
+<li><p>Option type: <a class="reference external" href="https://en.wikipedia.org/wiki/Option_type">https://en.wikipedia.org/wiki/Option_type</a></p></li>
 </ul>
 </div>
 <div class="section" id="changelog">
