@@ -41,8 +41,10 @@ resolution: url to discussion (required for Accepted | Rejected | Withdrawn)
   * Methods Decoration
   * Core methods
 * Inheritance
+* Template class
+* Interface
+* Instantiation
 * Docstrings
-* Class Instance
 
 **Conventions**
 
@@ -206,25 +208,37 @@ notes:
 - This example ilustrate how to create a class for Fenix Language.
 """
 
-class Base[+]:
+interface IBase:
+  """
+  title: Define the interface for Base classes.
+  """
+  attributes:
+    _attr1: [-] Nullable[int]
+    _attr2: [#] mutable float
+    attr3: [+] constant string = "default"
+
+  methods:
+    add(number1: int32, number2: int32)[+] -> int32
+    sub(number1: int32, number2: int32)[+] -> int32
+
+
+class Base(IBase)[+]:
   """
   title: The Base class aims to organize a simple and util set of attributes
     and methods to be reused for derived classes.
-
-  attributes:
-    - _attr1: Attribute used as a first attribute
-    - _attr2: Attribute used as a second attribute
-    - attr3: Attribute used as a third attribute
   """
 
   attributes:
-    [-] _attr1: Nullable[int]
-    [#] _attr2: mutable float
-    [+] attr3: constant string = "default"
+    ### Attribute used as a first information
+    _attr1: [-] mutable [int|float]?
+    ### Attribute used as a second information
+    _attr2: [#] mutable float
+    ### Attribute used as a third information
+    attr3: [+] constant string = "default"
 
   methods:
     __init__(
-      attr1: Nullable[int],
+      attr1: [int|float]?,
       attr2: mutable float,
       attr3: constant string = "default2"
     )[+]:
@@ -238,18 +252,22 @@ class Base[+]:
 
       notes:
         - if at the end of `__init__, self.attr1 is not defined, it
-          will assume `Null`
+          will assume `null`
         - if at the end of `__init__, self.attr2 is not defined, an
           error is raised.
         - if at the end of `__init__, self.attr3 is not defined, it
           will assume `"default"` string.
 
       """
-      self.arg1 = self.arg1
-      self.arg2 = self.arg2
-      self.arg3 = self.arg3
+      self.attr1 = attr1
+      self.attr2 = attr2
+      self.attr3 = attr3
 
-    add(number1: int, number2: int)[+] -> int:
+    add(
+      (number1: constant int32, number2: constant int32) -> int32,
+      (number1: constant int64, number2: constant int64) -> int64,
+      (number1: constant float32, number2: constant float32) -> float32
+    )[+]:
       """
       title: Add two integer and return the result.
 
@@ -261,14 +279,23 @@ class Base[+]:
       """
       return number1 + number2
 
+    add(*args: Tuple<string>)[+] -> string:
+      return ''.join(args, sep=', ')
 
-class Derived[+](Base):
+    add(value1: constant <T>, value2: constant <U>)[+]:
+      raise Exception(
+        "The operation between {type(value1)} and {type(value2)} " +
+        " is not supported".
+      )
+
+
+class DerivedOne(Base)[+]:
   attributes:
-    [+] attr4: datetime
+    attr4: [+] mutable datetime
 
   methods:
     __init__(
-      attr1: Nullable[int],
+      attr1: mutable nullable int,
       attr2: mutable float,
       attr3: constant string = "default2",
       attr4: datetime = datetime.now()
@@ -282,10 +309,11 @@ class Derived[+](Base):
         - attr3: The third parameter.
         - attr4: The forth attribute
       """
-      self.__base__[Base].__init__`(attr1, attr2, attr3)
+      ## or, in this case, just `self.__base__.__init__` ...
+      self.__base__[Base].__init__(attr1, attr2, attr3)
       self.attr4 = attr4
 
-    sub(number1: int, number2: int)[+] -> int:
+    sub(number1: int32, number2: int32)[+] -> int32:
       """
       title: Subtract two integer and return the result.
 
@@ -301,7 +329,19 @@ class Derived[+](Base):
       self.attr4 = datetime.now()
 
 
-derived_obj = Derived(attr1=null, attr2=2.5)
+class MyGenericClass<const T, mutable U>:
+  attributes:
+    attr1: [+] <T>
+    attr2: [+] <U>
+
+  methods:
+    __init__(attr1: <T>, attr2: <U>)[+]:
+      self.attr1 = attr1
+      self.attr2 = attr2
+
+
+derived_obj = DerivedOne(attr1=null, attr2=2.5)
+generic_obj = MyGenericClass<int32, float32>(2, 2.2)
 
 ```
 
@@ -315,6 +355,15 @@ This document has been placed in the public domain.
 * Magic Methods in Python: https://www.tutorialsteacher.com/python/magic-methods-in-python
 * A Guide to Python's Magic Methods: https://rszalski.github.io/magicmethods/
 * Class diagram: https://en.wikipedia.org/wiki/Class_diagram
+* Multiple dispatch: https://en.wikipedia.org/wiki/Multiple_dispatch
+* Template (C++): https://en.wikipedia.org/wiki/Template_(C%2B%2B)
+* Generics in Java: https://en.wikipedia.org/wiki/Generics_in_Java
+* Template metaprogramming: https://en.wikipedia.org/wiki/Template_metaprogramming
+* Generic programming: https://en.wikipedia.org/wiki/Generic_programming
+* Metaprogramming: https://en.wikipedia.org/wiki/Metaprogramming
+* Polymorphism (computer science): https://en.wikipedia.org/wiki/Polymorphism_(computer_science)
+* Nullable type: https://en.wikipedia.org/wiki/Nullable_type
+* Option type: https://en.wikipedia.org/wiki/Option_type
 
 
 ## Changelog
