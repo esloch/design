@@ -270,13 +270,115 @@ Naming and layout rules:
 
 ## Python
 
+##### Object Identity
+In Python, every object that is created is given a number that uniquely identifies it. It is guaranteed that no two objects will have the 
+same identifier during any period in which their lifetimes overlap. Once an object’s reference count drops to zero and it is garbage collected, 
+as happened to the 300 object above, then its identifying number becomes available and may be used again.
+
+```
+The built-in Python function id() returns an object’s integer identifier. Using the id() function, you can verify that two variables indeed point to the same object
+```
+
 ### Variable Name
 
-...
+Officially, variable names in Python can be any length and can consist of uppercase and lowercase letters (A-Z, a-z), digits (0-9), 
+and the underscore character *(_)*. An additional restriction is that, although a variable name can contain digits, the first character 
+of a variable name cannot be a digit.
+
+```
+Note: One of the additions to Python 3 was full Unicode support, which allows for Unicode characters in a variable name as well. You will learn about Unicode in greater depth in a future tutorial.
+
+```
+The most commonly used methods of constructing a multi-word variable name are the last three examples:
+
+- Camel Case: Second and subsequent words are capitalized, to make word boundaries easier to see. 
+(Presumably, it struck someone at some point that the capital letters strewn throughout the variable name vaguely resemble camel humps.)  
+*Example: numberOfCollegeGraduates*  
+- Pascal Case: Identical to Camel Case, except the first word is also capitalized.  
+*Example: NumberOfCollegeGraduates*  
+- Snake Case: Words are separated by underscores.  
+*Example: number_of_college_graduates*  
+
+The Style Guide for Python Code, also known as PEP 8, contains Naming Conventions that list 
+suggested standards for names of different object types. PEP 8 includes the following recommendations:
+
+*Snake Case* should be used for functions and variable names.
+*Pascal Case* should be used for class names. (PEP 8 refers to this as the “CapWords” convention.)  
+#### Reserved Keywords
+Keywords are the reserved words in Python.
+
+We cannot use a keyword as a variable name, function name or any other identifier. They are used to define the syntax and structure of the Python language.
+
+In Python, keywords are case sensitive.
+
+There are 33 keywords in Python 3.7. This number can vary slightly over the course of time.
+
+All the keywords except True, False and None are in lowercase and they must be written as they are. The list of all the keywords is given below.
+|   |   |   |   |
+|---|---|---|---|
+False | await | else | import | pass |
+None | break | except | in | raise |
+True | class | finally | is | return |
+and | continue | for | lambda | try |
+as | def | from | nonlocal | while |
+assert | del | global | not | with |
+async | elif | if | or | yield |
+
+### Global Variable Names
+(Let's hope that these variables are meant for use inside one module only.) The conventions are about the same as those for functions.
+
+Modules that are designed for use via from M import * should use the *\__all__* mechanism to prevent exporting globals, or use the older convention of prefixing such globals with an underscore (which you might want to do to indicate these globals are "module non-public").
+
+### Function and Variable Names
+Function names should be lowercase, with words separated by underscores as necessary to improve readability.
+
+Variable names follow the same convention as function names.
+
+**mixedCase** is allowed only in contexts where that's already the prevailing style (e.g. threading.py), to retain backwards compatibility.
+
+### Function and Method Arguments
+Always use self for the first argument to instance methods.
+
+Always use cls for the first argument to class methods.
+
+If a function argument's name clashes with a reserved keyword, it is generally better to append a single trailing underscore 
+rather than use an abbreviation or spelling corruption. Thus class_ is better than clss. (Perhaps better is to avoid such clashes by using a synonym.)
+
+### Method Names and Instance Variables
+Use the function naming rules: lowercase with words separated by underscores as necessary to improve readability.
+
+Use one leading underscore only for non-public methods and instance variables.
+
+To avoid name clashes with subclasses, use two leading underscores to invoke Python's name mangling rules.
+
+Python mangles these names with the class name: if class Foo has an attribute named *\__a*, it cannot be accessed by *Foo.\__a.* 
+(An insistent user could still gain access by calling *Foo._Foo__a.*) Generally, double leading underscores should be used only to avoid name 
+conflicts with attributes in classes designed to be subclassed.
+
+Note: there is some controversy about the use of *\__names*.
+
+### Constants
+Constants are usually defined on a module level and written in all capital letters with underscores separating words. 
+Examples include MAX_OVERFLOW and TOTAL.
 
 ### Type Annotation/Declaration
 
-...
+2.21 *Type Annotated Code*
+You can annotate Python 3 code with type hints according to [PEP-484](https://www.python.org/dev/peps/pep-0484/), and type-check the code at build time with a type checking tool like pytype.
+
+Type annotations can be in the source or in a stub pyi file. Whenever possible, annotations should be in the source. Use pyi files for third-party or extension modules.
+
+2.21.1 *Definition*
+Type annotations (or “type hints”) are for function or method arguments and return values:
+
+```def func(a: int) -> List[int]:```
+You can also declare the type of a variable using similar PEP-526 syntax:
+
+``` a: SomeType = some_func()```
+Or by using a type comment in code that must support legacy Python versions.
+
+```a = some_func()```  # type: SomeType
+
 
 ### Constant and Mutable Variables
 
@@ -292,8 +394,10 @@ Naming and layout rules:
 
 ### References
 
-...
-
+https://google.github.io/styleguide/pyguide.html#316-naming  
+https://realpython.com/python-variables/
+https://www.programiz.com/python-programming/keywords-identifier
+https://www.python.org/dev/peps/pep-0008/#naming-conventions  
 
 ## R
 
